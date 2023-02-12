@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+body {
+    background-image:url('https://www.pixelstalk.net/wp-content/uploads/2016/05/Math-Wallpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: 1px solid #15f4ee;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+button {
+    box-shadow: 0 1px 5px 0 #15f4ee inset, 0 1px 5px 0 #15f4ee,
+                0 1px 5px 0 #15f4ee inset, 0 1px 5px 0 #15f4ee;
+}
+
+button:focus {
+    outline: none;
+}
+
+.calculator {
+    background: #050505;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .75rem;
+    width: 325px;
+    border: 1px solid #333;
+    padding: .75rem;
+    border-radius: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.screen {
+    grid-column: 1 / 5;
+    border-radius: .75rem;
+    font-size: 2rem;
+    height: 6rem;
+    color: #fff;
+    background: #1a1a1b;
+    text-align: end;
+    padding: .5rem;
+}
+
+::placeholder {
+    color: #f0f5f8f1;
+}
+
+.symbol,
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1;
+    font-size: 1.25rem;
+    color: #4df4e9;
+    border-radius: 50%;
+    transition: .15s ease;
+}
+
+.symbol {
+    background: rgb(118, 76, 40);
+}
+
+.symbol:hover {
+    background: rgb(105, 104, 102);
+}
+
+.number {
+    background: #313130;
+}
+
+.number:hover {
+    background: #7584b4ac;
+}
